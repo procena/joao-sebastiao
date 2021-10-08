@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Beckham - Free Bootstrap 4 Template by Colorlib</title>
+    <title>João Sebastião</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="scss/custom.css">
   </head>
   <body>
     <div class="KW_progressContainer">
@@ -86,7 +87,69 @@
                 <h2>Cursos & Certificações</h2>
               </div>
             </div>
+            <h1 class="ml-5 ">Certificações</h1>
+            <hr class="style18">
             <div class="row">
+              <div class="col-md-4 ftco-animate">
+                <div class="blog-entry">
+                  <a
+                    href="https://certificates.easy-lms.com/exam/session/70070add-fe0e-4947-a636-07d3b10601bf"
+                    target="__blanck"
+                    class="block-20"
+                    style="
+                      background-image: url('https://cdn.shopify.com/s/files/1/0299/9215/7283/products/Scrum-Foundation-Professional-Certificate-SFPC_480x480.png?v=1612192643');
+                    "
+                  >
+                  </a>
+                  <div class="text p-4 d-block">
+                    <div class="meta mb-3">
+                      <div>
+                        <a href="https://certiprof.com/"
+                          >CertiProf - Professional Knowledge</a
+                        >
+                      </div>
+                    </div>
+                    <h3 class="heading">
+                      <a href="#"
+                        >Scrum Foundation Professional Certificate SFPC</a
+                      >
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 ftco-animate">
+                <div class="blog-entry">
+                  <a
+                    href="https://certificates.easy-lms.com/exam/session/72da2d9d-137d-43a9-a67a-52387bfe0dbf"
+                    target="__blanck"
+                    class="block-20"
+                    style="
+                      background-image: url('https://cdn.shopify.com/s/files/1/0299/9215/7283/products/Kanban-Essentials-Professional-Certificate-KEPC_480x480.png?v=1612192241');
+                    "
+                  >
+                  </a>
+                  <div class="text p-4 d-block">
+                    <div class="meta mb-3">
+                      <div>
+                        <a href="https://certiprof.com/"
+                          >CertiProf - Professional Knowledge</a
+                        >
+                      </div>
+                    </div>
+                    <h3 class="heading">
+                      <a href="#"
+                        >Kanban Essentials Professional Certificate - KEPC</a
+                      >
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h1 class="ml-5 ">Cursos</h1>
+            <hr class="style18">
+            <div class="row">
+              
               <div class="col-md-4 ftco-animate">
                 <div class="blog-entry">
                   <a
@@ -94,7 +157,7 @@
                     target="__blanck"
                     class="block-20"
                     style="
-                      background-image: url('https://res.cloudinary.com/practicaldev/image/fetch/s--UTObUaqG--/c_imagga_scale,f_auto,fl_progressive,h_720,q_auto,w_1280/https://dev-to-uploads.s3.amazonaws.com/i/t2hguz5nsow823gcuix6.png');
+                      background-image: url('https://images.squarespace-cdn.com/content/v1/51814c87e4b0c1fda9c1fc50/1528473310893-RH0HG7R5C0QURMFQJBSU/600px-AWS_Lambda_logo.svg.png?format=500w');
                     "
                   >
                   </a>
@@ -630,20 +693,7 @@
                 </div>
               </div>
             </div>
-            <!--<div class="row mt-5">
-              <div class="col text-center">
-                <div class="block-27">
-                  <ul>
-                    <li><a href="#">&lt;</a></li>
-                    <li class="active"><span>1</span></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&gt;</a></li>
-                  </ul>
-                </div>
-              </div>-->
+          
             </div>
           </div>
         </section>
@@ -721,5 +771,25 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      var fixmeTop = $('.fixme').offset().top;       // get initial position of the element
+$(window).scroll(function() {                  // assign scroll event listener
+
+    var currentScroll = $(window).scrollTop(); // get current position
+
+    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+        $('.fixme').css({                      // scroll to that element or below it
+            position: 'fixed',
+            top: '0',
+            margin: '15px'
+        });
+    } else {                                   // apply position: static
+        $('.fixme').css({                      // if you scroll above it
+            position: 'static'
+        });
+    }
+
+});
+    </script>
   </body>
 </html>
