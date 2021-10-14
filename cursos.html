@@ -803,12 +803,13 @@
     <script>
     
     $.getJSON( "list.json", function( data ) {
+      console.log(data);
       var example2 = new Vue({
-  el: '#list-cursos',
-  data: {
-    parentMessage: 'Parent',
-    items: data.cursos
-  }
+      el: '#list-cursos',
+      data: {
+        parentMessage: 'Parent',
+        items: data.cursos
+      }
 })
   });
    
