@@ -31,33 +31,7 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="scss/custom.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script>
-    function load(url, callback) {
-  var xhr = new XMLHttpRequest();
-
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      callback(xhr.response);
-    }
-  }
-
-  xhr.open('GET', url, true);
-  xhr.send('');
-}
-
-load("list.json", (data)=>{
-  
-  data = JSON.parse(JSON.stringify(data));
-  console.log(data);
-      var listcursos = new Vue({
-      el: '#listcursos',
-      data: {
-        parentMessage: 'Parent',
-        items: data.cursos
-      }});
-})
- </script>
+    
   </head>
   <body>
     <div class="KW_progressContainer">
@@ -116,8 +90,8 @@ load("list.json", (data)=>{
             </div>
             <h1 class="ml-5 ">Certificações</h1>
             <hr class="style18">
-            <div class="row">
-              <div class="col-md-4 ftco-animate">
+            <div class="row" id="list-certificacoes">
+              <div class="col-md-4 ftco-animate line">
                 <div class="blog-entry">
                   <a
                     href="https://certificates.easy-lms.com/exam/session/70070add-fe0e-4947-a636-07d3b10601bf"
@@ -719,34 +693,6 @@ load("list.json", (data)=>{
                   </div>
                 </div>
               </div>
-
-              <div id="list-cursos">
-                <div v-for="item in items" class="col-md-4 ftco-animate">
-                  <div class="blog-entry" data-aos-delay="100">
-                    <a
-                      href="{{ item.link }}"
-                      target="__blanck"
-                      class="block-20"
-                      style="
-                        background-image: url('https://dtmvamahs40ux.cloudfront.net/gl-academy/course/course-511-devops-3148408_640.jpg');
-                      "
-                    >
-                    </a>
-                    <div class="text p-4">
-                      <div class="meta mb-3">
-                        <div>
-                          <a href="https://www.mygreatlearning.com/academy"
-                            >GREAT LEARNING ACADEMY {{ item.link }}</a
-                          >
-                        </div>
-                      </div>
-                      <h3 class="heading">
-                        <a href="#">Introduction to DevOps</a>
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           
             </div>
@@ -826,6 +772,10 @@ load("list.json", (data)=>{
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-    
+    <script>
+      $.getJSON('https://procena.github.io/joao-sebastiao/list.json', (data)=>{
+        console.log(data);
+      });
+    </script>
   </body>
 </html>
