@@ -47,6 +47,8 @@
 }
 
 load("list.json", (data)=>{
+  
+  data = JSON.parse(data);
   console.log(data);
       var teste = new Vue({
       el: '#list-cursos',
