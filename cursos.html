@@ -693,28 +693,30 @@
                 </div>
               </div>
 
-              <div v-for="item in itens" class="col-md-4 ftco-animate">
-                <div class="blog-entry" data-aos-delay="100">
-                  <a
-                    href="{{ item.link }}"
-                    target="__blanck"
-                    class="block-20"
-                    style="
-                      background-image: url('https://dtmvamahs40ux.cloudfront.net/gl-academy/course/course-511-devops-3148408_640.jpg');
-                    "
-                  >
-                  </a>
-                  <div class="text p-4">
-                    <div class="meta mb-3">
-                      <div>
-                        <a href="https://www.mygreatlearning.com/academy"
-                          >GREAT LEARNING ACADEMY</a
-                        >
+              <div id="list-cursos">
+                <div v-for="item in itens" class="col-md-4 ftco-animate">
+                  <div class="blog-entry" data-aos-delay="100">
+                    <a
+                      href="{{ item.link }}"
+                      target="__blanck"
+                      class="block-20"
+                      style="
+                        background-image: url('https://dtmvamahs40ux.cloudfront.net/gl-academy/course/course-511-devops-3148408_640.jpg');
+                      "
+                    >
+                    </a>
+                    <div class="text p-4">
+                      <div class="meta mb-3">
+                        <div>
+                          <a href="https://www.mygreatlearning.com/academy"
+                            >GREAT LEARNING ACADEMY</a
+                          >
+                        </div>
                       </div>
+                      <h3 class="heading">
+                        <a href="#">Introduction to DevOps</a>
+                      </h3>
                     </div>
-                    <h3 class="heading">
-                      <a href="#">Introduction to DevOps</a>
-                    </h3>
                   </div>
                 </div>
               </div>
@@ -801,7 +803,13 @@
     <script>
     
     $.getJSON( "ajax/test.json", function( data ) {
-
+      var example2 = new Vue({
+  el: '#list-cursos',
+  data: {
+    parentMessage: 'Parent',
+    items: data.cursos
+  }
+})
   });
    
     </script>
