@@ -49,7 +49,7 @@
 load("list.json", (data)=>{
   
   data = JSON.parse(JSON.stringify(data));
-  console.log(data.cursos);
+  console.log(data);
       var listcursos = new Vue({
       el: '#listcursos',
       data: {
@@ -736,7 +736,7 @@ load("list.json", (data)=>{
                       <div class="meta mb-3">
                         <div>
                           <a href="https://www.mygreatlearning.com/academy"
-                            >GREAT LEARNING ACADEMY</a
+                            >GREAT LEARNING ACADEMY {{ item.link }}</a
                           >
                         </div>
                       </div>
